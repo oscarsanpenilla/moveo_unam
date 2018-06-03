@@ -1,0 +1,27 @@
+
+
+
+La configuacion de los motores a pasos fue de 200 pasos por revolucion
+
+Nombre de las articulaciones:
+articulacion
+    1           rotacional base del robot
+    2           rotacional con dos motores nema hombro
+    3           rotacional codo (no funciona actualmente, su articulacion es muy rigida para ser movida por el motor)
+    4           rotacional muneca, el motor se encuentra dentro del robot, por lo que no es visible
+    5           rotacional muneca final
+    gripper     servomotor
+
+
+Los motores se caracterizaron de la siguiente manera
+
+articulacion
+    1           45grados equivalen a 250 pasos
+    2           45grados equivalen a 125 pasos, sim embargo, si el brazo se inclina demaciado, los motores no son capaces de regresarlo a su origen
+    3           no se pudo caracterizar por falla mecanica
+    4           90grados equivalen a 50 pasos, sin embargo, tambiene tiene falla mecanica que debe ser atendida
+    5           45grados equivalen a 100 pasos 
+    gripper     0grados abierto / 180grados cerrado, el servomotor tiene muy poca fuerza para poder sostener objetos.
+    
+
+
