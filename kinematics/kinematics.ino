@@ -39,6 +39,7 @@ Servo myservo;
 
 
 int servoPos;
+int servoPin = 8;
 int joint_step[6];
 bool message_recived = false;
 long positions[5]; 
@@ -74,7 +75,7 @@ void setup()
   nh.initNode();
   //Se subscribe el topic /joint_variables
   nh.subscribe(sub);
-
+  myservo.attach(servoPin);
   // Configure each stepper
   joint1.setMaxSpeed(100);
   joint2.setMaxSpeed(30);
@@ -103,6 +104,7 @@ void loop()
     positions[4] = -joint_step[4]*2.22; 
 
     steppers.moveTo(positions);
+    myservo.write(joint_step[5]); 
     nh.spinOnce();
     steppers.runSpeedToPosition(); // Blocks until all are in position
     
