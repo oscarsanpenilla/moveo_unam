@@ -71,8 +71,8 @@ void messageCb(const sensor_msgs::Joy& msg){
   btn1  = msg.buttons[1];//Griper cerrado
   btn2  = msg.buttons[2]; //Griper abierto
   btn3  = msg.buttons[3];//Junta 2 arriba
-  //Junta 3 arriba
-  //Junta 3 abajo
+  btn4  = msg.buttons[4];//Junta 3 arriba
+  btn5  = msg.buttons[5];//Junta 3 abajo
   arrowH  = msg.axes[6]; //Junta 4
   arrowV = msg.axes[7]; //Junta 5 abajo
   
